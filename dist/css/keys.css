@@ -7,6 +7,7 @@ html {
   margin: 0;
   height: 100%;
   font-size: 16px;
+  background-color: #deedf5;
 }
 .navbar,
 .navbar-small,
@@ -16,15 +17,14 @@ html {
   width: 100vw;
   display: flex;
   align-items: center;
+  /* Brand Content Type */
+  /* Light Theme */
 }
 .navbar-small {
   height: 3rem;
 }
 .navbar-large {
   height: 5rem;
-}
-.navbar-light {
-  background-color: #deedf5;
 }
 .navbar .brand {
   max-height: 4rem;
@@ -47,12 +47,18 @@ html {
   letter-spacing: 0.15rem;
   font-size: 1.25rem;
 }
+.navbar-light {
+  background-color: #deedf5;
+}
 .mech-key,
 .mech-key-linear {
   /* Mech Keys Variables */
   display: inline-block;
   cursor: pointer;
   transition: transform 0.1s;
+  /* Laptop Variant */
+  /* RGB Variant */
+  /* Light Theme */
 }
 .mech-key:not(img),
 .mech-key-linear:not(img) {
@@ -65,7 +71,7 @@ html {
   height: 2rem;
   width: auto;
   padding: 0.5rem 1rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
@@ -88,25 +94,16 @@ html {
   z-index: -1;
   border-radius: 0.4rem;
 }
-.mech-key.light,
-.mech-key-linear.light {
-  color: #242128;
-  background-color: #a5b9c4;
-}
-.mech-key.light:after,
-.mech-key-linear.light:after {
-  background-image: linear-gradient(#deedf5, #bcd5e3);
-}
 .mech-key:hover {
-  transform: scale(0.98);
+  transform: scale(0.95);
   transition: transform 0.08s ease-in;
 }
 .mech-key:active {
-  transform: scale(0.85);
+  transform: scale(0.9);
   transition: transform 0.03s ease-out;
 }
 .mech-key-linear:active {
-  transform: scale(0.85);
+  transform: scale(0.9);
   transition: transform 0.1s linear;
 }
 .mech-key.laptop:after,
@@ -141,7 +138,16 @@ html {
     box-shadow: 0pt 0pt 5pt red;
   }
 }
-.noselect {
+.mech-key.light,
+.mech-key-linear.light {
+  color: #242128;
+  background-color: #a5b9c4;
+}
+.mech-key.light:after,
+.mech-key-linear.light:after {
+  background-image: linear-gradient(#deedf5, #bcd5e3);
+}
+.no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;

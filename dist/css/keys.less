@@ -1,10 +1,10 @@
 /* Color Themes (CT) */
 @ct-dark: #242128;
-@ct-base: #3c3842;
-@ct-light: #4c515b;
-@ct-white: #deedf5;
-@ct-white-light: #bcd5e3;
-@ct-white-dark: #a5b9c4;
+@ct-dark-2: #3c3842;
+@ct-dark-3: #4c515b;
+@ct-light: #deedf5;
+@ct-light-2: #bcd5e3;
+@ct-light-3: #a5b9c4;
 
 /* Global Variables */
 @root-em: 16px;
@@ -14,17 +14,18 @@
 @navbar-elements-margin: 10pt;
 
 /* Mech Key Variables */
-@mech-key-down-length: 0.85;
-@mech-key-clicky-mid-length: 0.98;
+@mech-key-down-length: 0.90;
+@mech-key-clicky-mid-length: 0.95;
 
 body,html{
   margin: 0;
   height: 100%;
   font-size: @root-em;
+  background-color: @ct-light;
 }
 
 .navbar{
-  background-color: @ct-base;
+  background-color: @ct-dark-2;
   height: @navbar-base-height;
   width: 100vw;
   display: flex;
@@ -35,9 +36,8 @@ body,html{
   &-large:extend(.navbar){
     height: 5rem;
   }
-  &-light{
-    background-color: @ct-white;
-  }
+
+  /* Brand Content Type */
   .brand{
     max-height: @navbar-base-height;
     height: @navbar-base-height;
@@ -50,7 +50,7 @@ body,html{
     }
     &-type{
       margin: @navbar-elements-margin;
-      color: @ct-white;
+      color: @ct-light;
       max-font-size: @navbar-base-height;
       font-family: sans-serif;
       font-weight: bold;
@@ -58,6 +58,11 @@ body,html{
       letter-spacing: 0.15rem;
       font-size: 1.25rem;
     }
+  }
+
+  /* Light Theme */
+  &-light{
+    background-color: @ct-light;
   }
 }
 
@@ -67,12 +72,12 @@ body,html{
   cursor: pointer;
   transition: transform 0.1s;
   &:not(img), &-linear:not(img){
-    .noselect();
+    .no-select();
     background-color: @ct-dark;
     height: 2rem;
     width: auto;
     padding: 0.5rem 1rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
@@ -89,17 +94,9 @@ body,html{
       position: absolute;
       height: calc(100% - 0.85rem);
       width: calc(100% - 0.85rem);
-      background-image: linear-gradient(@ct-light, @ct-base);
+      background-image: linear-gradient(@ct-dark-3, @ct-dark-2);
       z-index: -1;
       border-radius: 0.4rem;
-    }
-  }
-
-  &.light, &-linear.light{
-    color: @ct-dark;
-    background-color: @ct-white-dark;
-    &:after{
-      background-image: linear-gradient(@ct-white, @ct-white-light);
     }
   }
   &:hover{
@@ -117,6 +114,7 @@ body,html{
     }
   }
 
+  /* Laptop Variant */
   &.laptop, &-linear.laptop{
     &:after{
       height: calc(100% - 0.3rem);
@@ -131,6 +129,7 @@ body,html{
     }
   }
 
+  /* RGB Variant */
   &.rgb, &-linear.rgb{
     @keyframes cycle{
       0%{box-shadow: 0pt 0pt 5pt red;}
@@ -140,10 +139,19 @@ body,html{
     }
     animation: cycle both 10s infinite linear;
   }
+
+  /* Light Theme */
+  &.light, &-linear.light{
+    color: @ct-dark;
+    background-color: @ct-light-3;
+    &:after{
+      background-image: linear-gradient(@ct-light, @ct-light-2);
+    }
+  }
 }
 
 
-.noselect{
+.no-select{
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
