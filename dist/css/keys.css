@@ -1,6 +1,7 @@
 /* Color Themes (CT) */
 /* Global Variables */
 /* Navbar Variables */
+/* Mech Key Variables */
 body,
 html {
   margin: 0;
@@ -10,7 +11,6 @@ html {
 .navbar,
 .navbar-small,
 .navbar-large {
-  /* Navbar Variables */
   background-color: #3c3842;
   height: 4rem;
   width: 100vw;
@@ -29,7 +29,7 @@ html {
 .navbar .brand {
   max-height: 4rem;
   height: 4rem;
-  margin: 0 10pt;
+  margin: 10pt;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ html {
   height: 70%;
 }
 .navbar .brand-type {
-  margin: 0 10pt;
+  margin: 10pt;
   color: #deedf5;
   max-font-size: 4rem;
   font-family: sans-serif;
@@ -49,6 +49,7 @@ html {
 }
 .mech-key,
 .mech-key-linear {
+  /* Mech Keys Variables */
   display: inline-block;
   cursor: pointer;
   transition: transform 0.1s;
@@ -87,8 +88,17 @@ html {
   z-index: -1;
   border-radius: 0.4rem;
 }
+.mech-key.light,
+.mech-key-linear.light {
+  color: #242128;
+  background-color: #a5b9c4;
+}
+.mech-key.light:after,
+.mech-key-linear.light:after {
+  background-image: linear-gradient(#deedf5, #bcd5e3);
+}
 .mech-key:hover {
-  transform: scale(0.95);
+  transform: scale(0.98);
   transition: transform 0.08s ease-in;
 }
 .mech-key:active {

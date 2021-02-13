@@ -3,6 +3,8 @@
 @ct-base: #3c3842;
 @ct-light: #4c515b;
 @ct-white: #deedf5;
+@ct-white-light: #bcd5e3;
+@ct-white-dark: #a5b9c4;
 
 /* Global Variables */
 @root-em: 16px;
@@ -11,6 +13,10 @@
 @navbar-base-height: 4rem;
 @navbar-elements-margin: 10pt;
 
+/* Mech Key Variables */
+@mech-key-down-length: 0.85;
+@mech-key-clicky-mid-length: 0.98;
+
 body,html{
   margin: 0;
   height: 100%;
@@ -18,12 +24,8 @@ body,html{
 }
 
 .navbar{
-  /* Navbar Variables */
-  @base-height: @navbar-base-height;
-  @elements-margin: 0 @navbar-elements-margin;
-
   background-color: @ct-base;
-  height: @base-height;
+  height: @navbar-base-height;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -37,9 +39,9 @@ body,html{
     background-color: @ct-white;
   }
   .brand{
-    max-height: @base-height;
-    height: @base-height;
-    margin: @elements-margin;
+    max-height: @navbar-base-height;
+    height: @navbar-base-height;
+    margin: @navbar-elements-margin;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -47,9 +49,9 @@ body,html{
       height: 70%;
     }
     &-type{
-      margin: @elements-margin;
+      margin: @navbar-elements-margin;
       color: @ct-white;
-      max-font-size: @base-height;
+      max-font-size: @navbar-base-height;
       font-family: sans-serif;
       font-weight: bold;
       text-transform: uppercase;
@@ -60,6 +62,7 @@ body,html{
 }
 
 .mech-key{
+  /* Mech Keys Variables */
   display: inline-block;
   cursor: pointer;
   transition: transform 0.1s;
@@ -91,17 +94,25 @@ body,html{
       border-radius: 0.4rem;
     }
   }
+
+  &.light, &-linear.light{
+    color: @ct-dark;
+    background-color: @ct-white-dark;
+    &:after{
+      background-image: linear-gradient(@ct-white, @ct-white-light);
+    }
+  }
   &:hover{
-    transform: scale(0.95);
+    transform: scale(@mech-key-clicky-mid-length);
     transition: transform 0.08s ease-in;
   }
   &:active{
-    transform: scale(0.85);
+    transform: scale(@mech-key-down-length);
     transition: transform 0.03s ease-out;
   }
   &-linear:extend(.mech-key){
     &:active{
-      transform: scale(0.85);
+      transform: scale(@mech-key-down-length);
       transition: transform 0.1s linear;
     }
   }
