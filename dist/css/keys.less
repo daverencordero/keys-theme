@@ -1,3 +1,141 @@
-.container{
-  border-radius: 0.5rem;
+/* Color Themes (CT) */
+@ct-dark: #242128;
+@ct-base: #3c3842;
+@ct-light: #4c515b;
+@ct-white: #deedf5;
+
+/* Global Variables */
+@root-em: 16px;
+
+/* Navbar Variables */
+@navbar-base-height: 4rem;
+@navbar-elements-margin: 10pt;
+
+body,html{
+  margin: 0;
+  height: 100%;
+  font-size: @root-em;
+}
+
+.navbar{
+  /* Navbar Variables */
+  @base-height: @navbar-base-height;
+  @elements-margin: 0 @navbar-elements-margin;
+
+  background-color: @ct-base;
+  height: @base-height;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  &-small:extend(.navbar){
+    height: 3rem;
+  }
+  &-large:extend(.navbar){
+    height: 5rem;
+  }
+  &-light{
+    background-color: @ct-white;
+  }
+  .brand{
+    max-height: @base-height;
+    height: @base-height;
+    margin: @elements-margin;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    &-img{
+      height: 70%;
+    }
+    &-type{
+      margin: @elements-margin;
+      color: @ct-white;
+      max-font-size: @base-height;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.15rem;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.mech-key{
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.1s;
+  &:not(img), &-linear:not(img){
+    .noselect();
+    background-color: @ct-dark;
+    height: 2rem;
+    width: auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    color: white;
+    position: relative;
+    border-radius: 0.5rem;
+    z-index: 1;
+    &:after{
+      content: '';
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      height: calc(100% - 0.85rem);
+      width: calc(100% - 0.85rem);
+      background-image: linear-gradient(@ct-light, @ct-base);
+      z-index: -1;
+      border-radius: 0.4rem;
+    }
+  }
+  &:hover{
+    transform: scale(0.95);
+    transition: transform 0.08s ease-in;
+  }
+  &:active{
+    transform: scale(0.85);
+    transition: transform 0.03s ease-out;
+  }
+  &-linear:extend(.mech-key){
+    &:active{
+      transform: scale(0.85);
+      transition: transform 0.1s linear;
+    }
+  }
+
+  &.laptop, &-linear.laptop{
+    &:after{
+      height: calc(100% - 0.3rem);
+      width: calc(100% - 0.3rem);
+    }
+    &:hover{
+      transform: none;
+    }
+    &:active:after{
+      height: calc(100% - 0.15rem);
+      width: calc(100% - 0.15rem);
+    }
+  }
+
+  &.rgb, &-linear.rgb{
+    @keyframes cycle{
+      0%{box-shadow: 0pt 0pt 5pt red;}
+      33%{box-shadow: 0pt 0pt 5pt blue;}
+      66%{box-shadow: 0pt 0pt 5pt lime;}
+      100%{box-shadow: 0pt 0pt 5pt red;}
+    }
+    animation: cycle both 10s infinite linear;
+  }
+}
+
+
+.noselect{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
