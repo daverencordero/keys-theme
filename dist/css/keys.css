@@ -1,7 +1,7 @@
 /* Color Themes (CT) */
 /* Global Variables */
-/* Navbar Variables */
-/* Mech Key Variables */
+/* Navbar Variables (NB) */
+/* Mech Key Variables (MK) */
 body,
 html {
   margin: 0;
@@ -70,12 +70,13 @@ html {
   background-color: #242128;
   height: 2rem;
   width: auto;
+  min-width: max-content;
   padding: 0.5rem 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
-  color: white;
+  color: #deedf5;
   position: relative;
   border-radius: 0.5rem;
   z-index: 1;
@@ -83,7 +84,6 @@ html {
 .mech-key:not(img):after,
 .mech-key-linear:not(img):after {
   content: '';
-  color: white;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
