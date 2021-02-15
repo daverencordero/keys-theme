@@ -1,3 +1,6 @@
+/* Imports */
+@import "core.less";
+
 /* Color Themes (CT) */
 @ct-dark: #242128;
 @ct-dark-2: #3c3842;
@@ -6,9 +9,6 @@
 @ct-light-2: #bcd5e3;
 @ct-light-3: #a5b9c4;
 
-/* Global Variables */
-@root-em: 16px;
-@margin-multiplier: 0.5rem;
 
 /* Navbar Variables (NB) */
 @nb-base-height: 4rem;
@@ -30,13 +30,6 @@
   33%{background-color: blue;}
   66%{background-color: lime;}
   100%{background-color: red;}
-}
-
-body,html{
-  margin: 0;
-  height: 100%;
-  font-size: @root-em;
-  background-color: @ct-light;
 }
 
 .navbar{
@@ -129,6 +122,7 @@ body,html{
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
+    font-size: 1rem;
     color: @ct-light;
     position: relative;
     border-radius: 0.5rem;
@@ -142,7 +136,7 @@ body,html{
       position: absolute;
       height: calc(100% - 0.85rem);
       width: calc(100% - 0.85rem);
-      background-image: linear-gradient(@ct-dark-3, @ct-dark-2);
+      background-image: linear-gradient(90deg, @ct-dark-3, @ct-dark-2);
       z-index: -1;
       border-radius: 0.4rem;
     }
@@ -190,51 +184,19 @@ body,html{
       background-image: linear-gradient(@ct-light, @ct-light-2);
     }
   }
-}
 
-.no-select{
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Margin Classes */
-
-.margin-setup(@axis, @axis-initial){
-  .m@{axis-initial}-auto when not (@axis-initial = y) and not (@axis-initial = x){
-    margin-@{axis}: auto;
-  }
-  .my-auto when (@axis-initial = y){
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .mx-auto when (@axis-initial = x){
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .margin-loop(5);
-
-  .margin-loop(@i) when (@i > 0){
-    .m@{axis-initial}-@{i} when not (@axis-initial = y) and not (@axis-initial = x){
-      margin-@{axis}: calc(@margin-multiplier * @i);
+  /* Retro Round */
+  &.round, &-linear.round{
+    height: 2rem;
+    width: calc(2rem - 1rem);
+    border-radius: 50vh;
+    &:after{
+      border-radius: 50vh;
     }
-    .m@{axis-initial}-@{i} when (@axis-initial = y){
-      margin-top: calc(@margin-multiplier * @i);
-      margin-bottom: calc(@margin-multiplier * @i);
-    }
-    .m@{axis-initial}-@{i} when (@axis-initial = x){
-      margin-left: calc(@margin-multiplier * @i);
-      margin-right: calc(@margin-multiplier * @i);
-    }
-    .margin-loop(@i - 1);
   }
 }
 
-.margin-setup(y, y);
-.margin-setup(x, x);
-.margin-setup(top, t);
-.margin-setup(bottom, b);
-.margin-setup(left, l);
-.margin-setup(right, r);
+/* HTML Elements Defaults */
+button{
+  .mech-key();
+}

@@ -1,0 +1,96 @@
+/* Global Variables */
+@root-em: 16px;
+@margin-multiplier: 0.5rem;
+@shadow-multiplier: 0.5rem;
+@shadow-opacity: 0.40;
+@margin-classes-num: 5;
+@shadow-classes-num: 5;
+
+/* Setup */
+body,html{
+  margin: 0;
+  height: 100%;
+  font-family: sans-serif;
+  font-size: @root-em;
+}
+
+/* Containers */
+.container{
+  display: block;
+  margin: auto;
+  max-width: 60rem;
+}
+
+/* HTML Elements Defaults */
+button{
+  box-sizing: content-box;
+  border: none;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+/* Misc Utility */
+.no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Shadows */
+.shadow-loop(@i) when (@i > 0){
+  .sh-@{i}{
+    box-shadow: 0 0 calc(@i * @shadow-multiplier) rgba(0,0,0,@shadow-opacity);
+  }
+  .si-@{i}{
+    box-shadow: 0 0 calc(@i * @shadow-multiplier) inset rgba(0,0,0,@shadow-opacity);
+  }
+  .sb-@{i}{
+    box-shadow: 0 0 calc(@i * @shadow-multiplier) rgba(0,0,0,@shadow-opacity),
+    0 0 calc(@i * @shadow-multiplier) inset rgba(0,0,0,@shadow-opacity);
+  }
+  .shadow-loop(@i - 1);
+}
+
+.shadow-loop(@shadow-classes-num);
+
+/* Margin Classes */
+.margin-setup(@axis, @axis-initial){
+  .m@{axis-initial}-auto when not (@axis-initial = y) and not (@axis-initial = x){
+    margin-@{axis}: auto;
+  }
+  .my-auto when (@axis-initial = y){
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .mx-auto when (@axis-initial = x){
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .margin-loop(@margin-classes-num);
+
+  .margin-loop(@i) when (@i > 0){
+    .m@{axis-initial}-@{i} when not (@axis-initial = y) and not (@axis-initial = x){
+      margin-@{axis}: calc(@margin-multiplier * @i);
+    }
+    .m@{axis-initial}-@{i} when (@axis-initial = y){
+      margin-top: calc(@margin-multiplier * @i);
+      margin-bottom: calc(@margin-multiplier * @i);
+    }
+    .m@{axis-initial}-@{i} when (@axis-initial = x){
+      margin-left: calc(@margin-multiplier * @i);
+      margin-right: calc(@margin-multiplier * @i);
+    }
+    .margin-loop(@i - 1);
+  }
+}
+
+.margin-setup(y, y);
+.margin-setup(x, x);
+.margin-setup(top, t);
+.margin-setup(bottom, b);
+.margin-setup(left, l);
+.margin-setup(right, r);
