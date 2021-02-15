@@ -2,6 +2,35 @@
 /* Global Variables */
 /* Navbar Variables (NB) */
 /* Mech Key Variables (MK) */
+/* Animations */
+@keyframes bs-rgb-cycle {
+  0% {
+    box-shadow: 0 0 5pt red;
+  }
+  33% {
+    box-shadow: 0 0 5pt blue;
+  }
+  66% {
+    box-shadow: 0 0 5pt lime;
+  }
+  100% {
+    box-shadow: 0 0 5pt red;
+  }
+}
+@keyframes bc-rgb-cycle {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: blue;
+  }
+  66% {
+    background-color: lime;
+  }
+  100% {
+    background-color: red;
+  }
+}
 body,
 html {
   margin: 0;
@@ -26,10 +55,40 @@ html {
 .navbar-large {
   height: 5rem;
 }
+.navbar-menu {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+.navbar-menu-item:not(.mech-key, .mech-key-linear) {
+  color: #deedf5;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+}
+.navbar-menu-item:not(.mech-key, .mech-key-linear):after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 120%;
+  height: 0.2rem;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.navbar-menu-item:not(.mech-key, .mech-key-linear):hover:after {
+  animation: bc-rgb-cycle both 10s infinite linear;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
 .navbar .brand {
   max-height: 4rem;
   height: 4rem;
-  margin: 10pt;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -38,7 +97,6 @@ html {
   height: 70%;
 }
 .navbar .brand-type {
-  margin: 10pt;
   color: #deedf5;
   max-font-size: 4rem;
   font-family: sans-serif;
@@ -83,6 +141,7 @@ html {
 }
 .mech-key:not(img):after,
 .mech-key-linear:not(img):after {
+  opacity: 1;
   content: '';
   top: 50%;
   left: 50%;
@@ -122,21 +181,7 @@ html {
 }
 .mech-key.rgb,
 .mech-key-linear.rgb {
-  animation: cycle both 10s infinite linear;
-}
-@keyframes cycle {
-  0% {
-    box-shadow: 0pt 0pt 5pt red;
-  }
-  33% {
-    box-shadow: 0pt 0pt 5pt blue;
-  }
-  66% {
-    box-shadow: 0pt 0pt 5pt lime;
-  }
-  100% {
-    box-shadow: 0pt 0pt 5pt red;
-  }
+  animation: bs-rgb-cycle both 10s infinite linear;
 }
 .mech-key.light,
 .mech-key-linear.light {
@@ -153,5 +198,126 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+/* Margin Classes */
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.my-5 {
+  margin-top: calc(0.5rem * 5);
+  margin-bottom: calc(0.5rem * 5);
+}
+.my-4 {
+  margin-top: calc(0.5rem * 4);
+  margin-bottom: calc(0.5rem * 4);
+}
+.my-3 {
+  margin-top: calc(0.5rem * 3);
+  margin-bottom: calc(0.5rem * 3);
+}
+.my-2 {
+  margin-top: calc(0.5rem * 2);
+  margin-bottom: calc(0.5rem * 2);
+}
+.my-1 {
+  margin-top: calc(0.5rem * 1);
+  margin-bottom: calc(0.5rem * 1);
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mx-5 {
+  margin-left: calc(0.5rem * 5);
+  margin-right: calc(0.5rem * 5);
+}
+.mx-4 {
+  margin-left: calc(0.5rem * 4);
+  margin-right: calc(0.5rem * 4);
+}
+.mx-3 {
+  margin-left: calc(0.5rem * 3);
+  margin-right: calc(0.5rem * 3);
+}
+.mx-2 {
+  margin-left: calc(0.5rem * 2);
+  margin-right: calc(0.5rem * 2);
+}
+.mx-1 {
+  margin-left: calc(0.5rem * 1);
+  margin-right: calc(0.5rem * 1);
+}
+.mt-auto {
+  margin-top: auto;
+}
+.mt-5 {
+  margin-top: calc(0.5rem * 5);
+}
+.mt-4 {
+  margin-top: calc(0.5rem * 4);
+}
+.mt-3 {
+  margin-top: calc(0.5rem * 3);
+}
+.mt-2 {
+  margin-top: calc(0.5rem * 2);
+}
+.mt-1 {
+  margin-top: calc(0.5rem * 1);
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.mb-5 {
+  margin-bottom: calc(0.5rem * 5);
+}
+.mb-4 {
+  margin-bottom: calc(0.5rem * 4);
+}
+.mb-3 {
+  margin-bottom: calc(0.5rem * 3);
+}
+.mb-2 {
+  margin-bottom: calc(0.5rem * 2);
+}
+.mb-1 {
+  margin-bottom: calc(0.5rem * 1);
+}
+.ml-auto {
+  margin-left: auto;
+}
+.ml-5 {
+  margin-left: calc(0.5rem * 5);
+}
+.ml-4 {
+  margin-left: calc(0.5rem * 4);
+}
+.ml-3 {
+  margin-left: calc(0.5rem * 3);
+}
+.ml-2 {
+  margin-left: calc(0.5rem * 2);
+}
+.ml-1 {
+  margin-left: calc(0.5rem * 1);
+}
+.mr-auto {
+  margin-right: auto;
+}
+.mr-5 {
+  margin-right: calc(0.5rem * 5);
+}
+.mr-4 {
+  margin-right: calc(0.5rem * 4);
+}
+.mr-3 {
+  margin-right: calc(0.5rem * 3);
+}
+.mr-2 {
+  margin-right: calc(0.5rem * 2);
+}
+.mr-1 {
+  margin-right: calc(0.5rem * 1);
 }
 /*# sourceMappingURL=keys.css.map */
