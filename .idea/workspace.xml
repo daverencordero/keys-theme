@@ -24,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/dist/css/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/core.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/keys.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/keys.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/keys.less" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/keys.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sample/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sample/style.css" afterDir="false" />
@@ -79,7 +80,7 @@
       <workItem from="1613345227418" duration="13760000" />
       <workItem from="1613360903811" duration="2639000" />
       <workItem from="1613433498720" duration="118000" />
-      <workItem from="1614239369398" duration="881000" />
+      <workItem from="1614239369398" duration="3655000" />
     </task>
     <servers />
   </component>

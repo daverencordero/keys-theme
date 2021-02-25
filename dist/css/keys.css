@@ -12,7 +12,26 @@ html {
 .container {
   display: block;
   margin: auto;
-  max-width: 60rem;
+}
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
 }
 /* HTML Elements Defaults */
 button {
@@ -352,7 +371,8 @@ button:focus {
 }
 .navbar,
 .navbar-small,
-.navbar-large {
+.navbar-large,
+.navbar-light {
   background-color: #3c3842;
   height: 4rem;
   width: 100vw;
@@ -398,17 +418,20 @@ button:focus {
   opacity: 1;
   transition: opacity 0.4s;
 }
-.navbar .brand {
+.navbar .brand,
+.navbar-light .brand {
   max-height: 4rem;
   height: 4rem;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
-.navbar .brand-img {
+.navbar .brand-img,
+.navbar-light .brand-img {
   height: 70%;
 }
-.navbar .brand-type {
+.navbar .brand-type,
+.navbar-light .brand-type {
   color: #deedf5;
   max-font-size: 4rem;
   font-family: sans-serif;

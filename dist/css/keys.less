@@ -80,7 +80,7 @@
   }
 
   /* Brand Content Type */
-  .brand{
+  & .brand, &-light .brand{
     max-height: @nb-base-height;
     height: @nb-base-height;
     cursor: pointer;
@@ -101,7 +101,7 @@
   }
 
   /* Light Theme */
-  &-light{
+  &-light:extend(.navbar){
     background-color: @ct-light;
   }
 }
