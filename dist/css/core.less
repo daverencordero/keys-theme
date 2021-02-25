@@ -1,9 +1,11 @@
 /* Global Variables */
 @root-em: 16px;
 @margin-multiplier: 0.5rem;
+@padding-multiplier: 0.5rem;
 @shadow-multiplier: 0.5rem;
 @shadow-opacity: 0.40;
 @margin-classes-num: 5;
+@padding-classes-num: 5;
 @shadow-classes-num: 5;
 
 /* Setup */
@@ -94,3 +96,41 @@ button{
 .margin-setup(bottom, b);
 .margin-setup(left, l);
 .margin-setup(right, r);
+
+/* Padding Classes */
+.padding-setup(@axis, @axis-initial){
+  .p@{axis-initial}-auto when not (@axis-initial = y) and not (@axis-initial = x){
+    padding-@{axis}: auto;
+  }
+  .py-auto when (@axis-initial = y){
+    padding-top: auto;
+    padding-bottom: auto;
+  }
+  .px-auto when (@axis-initial = x){
+    padding-left: auto;
+    padding-right: auto;
+  }
+  .padding-loop(@padding-classes-num);
+
+  .padding-loop(@i) when (@i > 0){
+    .p@{axis-initial}-@{i} when not (@axis-initial = y) and not (@axis-initial = x){
+      padding-@{axis}: calc(@padding-multiplier * @i);
+    }
+    .p@{axis-initial}-@{i} when (@axis-initial = y){
+      padding-top: calc(@padding-multiplier * @i);
+      padding-bottom: calc(@padding-multiplier * @i);
+    }
+    .p@{axis-initial}-@{i} when (@axis-initial = x){
+      padding-left: calc(@padding-multiplier * @i);
+      padding-right: calc(@padding-multiplier * @i);
+    }
+    .padding-loop(@i - 1);
+  }
+}
+
+.padding-setup(y, y);
+.padding-setup(x, x);
+.padding-setup(top, t);
+.padding-setup(bottom, b);
+.padding-setup(left, l);
+.padding-setup(right, r);

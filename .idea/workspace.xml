@@ -19,7 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5528a111-c694-4a14-be50-9c9671d17979" name="Default Changelist" comment="" />
+    <list default="true" id="5528a111-c694-4a14-be50-9c9671d17979" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/core.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/keys.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/keys.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/keys.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sample/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sample/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/sample/style.min.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +78,8 @@
       <workItem from="1613301911530" duration="1188000" />
       <workItem from="1613345227418" duration="13760000" />
       <workItem from="1613360903811" duration="2639000" />
+      <workItem from="1613433498720" duration="118000" />
+      <workItem from="1614239369398" duration="881000" />
     </task>
     <servers />
   </component>
@@ -85,6 +96,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="654" y="244" width="774" height="335" key="#File_Watchers" timestamp="1613035411333">
