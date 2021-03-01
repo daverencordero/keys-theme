@@ -22,20 +22,22 @@
 /* Column Variables */
 @column-classes-num: 12;
 @sm-breakpoint: 576px;
-@sm-max-width: 100%;
+@sm-max-width: 540px;
 @md-breakpoint: 768px;
-@md-max-width: 550px;
+@md-max-width: 720px;
 @lg-breakpoint: 992px;
-@lg-max-width: 800px;
+@lg-max-width: 960px;
 @xl-breakpoint: 1200px;
-@xl-max-width: 1000px;
+@xl-max-width: 1140px;
 
 /* Setup */
 body,html{
   margin: 0;
   height: 100%;
+  overflow: auto;
   font-family: sans-serif;
   font-size: @root-em;
+  box-sizing: border-box;
 }
 
 .navbar{
@@ -117,6 +119,7 @@ body,html{
 .container{
   display: block;
   margin: auto;
+  width: 100%;
 
   @media (min-width: @sm-breakpoint){
     max-width: @sm-max-width;
@@ -179,7 +182,7 @@ button{
     &-@{i}{
       max-width: 100%;
       @media (min-width: @sm-breakpoint){
-        max-width: calc((@column-classes-num / @i) * 100%);
+        max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }
@@ -187,7 +190,7 @@ button{
     &-@{i}{
       max-width: 100%;
       @media (min-width: @md-breakpoint){
-        max-width: calc((@column-classes-num / @i) * 100%);
+        max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }
@@ -195,7 +198,7 @@ button{
     &-@{i}{
       max-width: 100%;
       @media (min-width: @lg-breakpoint){
-        max-width: calc((@column-classes-num / @i) * 100%);
+        max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }
@@ -203,7 +206,7 @@ button{
     &-@{i}{
       max-width: 100%;
       @media (min-width: @xl-breakpoint){
-        max-width: calc((@column-classes-num / @i) * 100%);
+        max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }

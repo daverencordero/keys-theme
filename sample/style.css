@@ -1,6 +1,5 @@
 :root{
     --container-border-radius: 0.5rem;
-
 }
 
 body, html{
@@ -13,7 +12,3 @@ body, html{
     width: 100%;
 }
 
-.navigation{
-    height: auto;
-    width: 50%;
-}

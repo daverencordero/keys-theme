@@ -9,8 +9,10 @@ body,
 html {
   margin: 0;
   height: 100%;
+  overflow: auto;
   font-family: sans-serif;
   font-size: 16px;
+  box-sizing: border-box;
 }
 .navbar,
 .navbar-small,
@@ -90,25 +92,26 @@ html {
 .container {
   display: block;
   margin: auto;
+  width: 100%;
 }
 @media (min-width: 576px) {
   .container {
-    max-width: 100%;
+    max-width: 540px;
   }
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 550px;
+    max-width: 720px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    max-width: 800px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1000px;
+    max-width: 1140px;
   }
 }
 /* HTML Elements Defaults */
@@ -214,7 +217,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-11 {
-    max-width: calc((12 / 11) * 100%);
+    max-width: calc((11 / 12) * 100%);
   }
 }
 .col-md-11 {
@@ -222,7 +225,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-11 {
-    max-width: calc((12 / 11) * 100%);
+    max-width: calc((11 / 12) * 100%);
   }
 }
 .col-lg-11 {
@@ -230,7 +233,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-11 {
-    max-width: calc((12 / 11) * 100%);
+    max-width: calc((11 / 12) * 100%);
   }
 }
 .col-xl-11 {
@@ -238,7 +241,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-11 {
-    max-width: calc((12 / 11) * 100%);
+    max-width: calc((11 / 12) * 100%);
   }
 }
 .col-sm-10 {
@@ -246,7 +249,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-10 {
-    max-width: calc((12 / 10) * 100%);
+    max-width: calc((10 / 12) * 100%);
   }
 }
 .col-md-10 {
@@ -254,7 +257,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-10 {
-    max-width: calc((12 / 10) * 100%);
+    max-width: calc((10 / 12) * 100%);
   }
 }
 .col-lg-10 {
@@ -262,7 +265,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-10 {
-    max-width: calc((12 / 10) * 100%);
+    max-width: calc((10 / 12) * 100%);
   }
 }
 .col-xl-10 {
@@ -270,7 +273,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-10 {
-    max-width: calc((12 / 10) * 100%);
+    max-width: calc((10 / 12) * 100%);
   }
 }
 .col-sm-9 {
@@ -278,7 +281,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-9 {
-    max-width: calc((12 / 9) * 100%);
+    max-width: calc((9 / 12) * 100%);
   }
 }
 .col-md-9 {
@@ -286,7 +289,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-9 {
-    max-width: calc((12 / 9) * 100%);
+    max-width: calc((9 / 12) * 100%);
   }
 }
 .col-lg-9 {
@@ -294,7 +297,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-9 {
-    max-width: calc((12 / 9) * 100%);
+    max-width: calc((9 / 12) * 100%);
   }
 }
 .col-xl-9 {
@@ -302,7 +305,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-9 {
-    max-width: calc((12 / 9) * 100%);
+    max-width: calc((9 / 12) * 100%);
   }
 }
 .col-sm-8 {
@@ -310,7 +313,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-8 {
-    max-width: calc((12 / 8) * 100%);
+    max-width: calc((8 / 12) * 100%);
   }
 }
 .col-md-8 {
@@ -318,7 +321,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-8 {
-    max-width: calc((12 / 8) * 100%);
+    max-width: calc((8 / 12) * 100%);
   }
 }
 .col-lg-8 {
@@ -326,7 +329,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-8 {
-    max-width: calc((12 / 8) * 100%);
+    max-width: calc((8 / 12) * 100%);
   }
 }
 .col-xl-8 {
@@ -334,7 +337,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-8 {
-    max-width: calc((12 / 8) * 100%);
+    max-width: calc((8 / 12) * 100%);
   }
 }
 .col-sm-7 {
@@ -342,7 +345,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-7 {
-    max-width: calc((12 / 7) * 100%);
+    max-width: calc((7 / 12) * 100%);
   }
 }
 .col-md-7 {
@@ -350,7 +353,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-7 {
-    max-width: calc((12 / 7) * 100%);
+    max-width: calc((7 / 12) * 100%);
   }
 }
 .col-lg-7 {
@@ -358,7 +361,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-7 {
-    max-width: calc((12 / 7) * 100%);
+    max-width: calc((7 / 12) * 100%);
   }
 }
 .col-xl-7 {
@@ -366,7 +369,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-7 {
-    max-width: calc((12 / 7) * 100%);
+    max-width: calc((7 / 12) * 100%);
   }
 }
 .col-sm-6 {
@@ -374,7 +377,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-6 {
-    max-width: calc((12 / 6) * 100%);
+    max-width: calc((6 / 12) * 100%);
   }
 }
 .col-md-6 {
@@ -382,7 +385,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-6 {
-    max-width: calc((12 / 6) * 100%);
+    max-width: calc((6 / 12) * 100%);
   }
 }
 .col-lg-6 {
@@ -390,7 +393,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-6 {
-    max-width: calc((12 / 6) * 100%);
+    max-width: calc((6 / 12) * 100%);
   }
 }
 .col-xl-6 {
@@ -398,7 +401,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-6 {
-    max-width: calc((12 / 6) * 100%);
+    max-width: calc((6 / 12) * 100%);
   }
 }
 .col-sm-5 {
@@ -406,7 +409,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-5 {
-    max-width: calc((12 / 5) * 100%);
+    max-width: calc((5 / 12) * 100%);
   }
 }
 .col-md-5 {
@@ -414,7 +417,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-5 {
-    max-width: calc((12 / 5) * 100%);
+    max-width: calc((5 / 12) * 100%);
   }
 }
 .col-lg-5 {
@@ -422,7 +425,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-5 {
-    max-width: calc((12 / 5) * 100%);
+    max-width: calc((5 / 12) * 100%);
   }
 }
 .col-xl-5 {
@@ -430,7 +433,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-5 {
-    max-width: calc((12 / 5) * 100%);
+    max-width: calc((5 / 12) * 100%);
   }
 }
 .col-sm-4 {
@@ -438,7 +441,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-4 {
-    max-width: calc((12 / 4) * 100%);
+    max-width: calc((4 / 12) * 100%);
   }
 }
 .col-md-4 {
@@ -446,7 +449,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-4 {
-    max-width: calc((12 / 4) * 100%);
+    max-width: calc((4 / 12) * 100%);
   }
 }
 .col-lg-4 {
@@ -454,7 +457,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-4 {
-    max-width: calc((12 / 4) * 100%);
+    max-width: calc((4 / 12) * 100%);
   }
 }
 .col-xl-4 {
@@ -462,7 +465,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-4 {
-    max-width: calc((12 / 4) * 100%);
+    max-width: calc((4 / 12) * 100%);
   }
 }
 .col-sm-3 {
@@ -470,7 +473,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-3 {
-    max-width: calc((12 / 3) * 100%);
+    max-width: calc((3 / 12) * 100%);
   }
 }
 .col-md-3 {
@@ -478,7 +481,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-3 {
-    max-width: calc((12 / 3) * 100%);
+    max-width: calc((3 / 12) * 100%);
   }
 }
 .col-lg-3 {
@@ -486,7 +489,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-3 {
-    max-width: calc((12 / 3) * 100%);
+    max-width: calc((3 / 12) * 100%);
   }
 }
 .col-xl-3 {
@@ -494,7 +497,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-3 {
-    max-width: calc((12 / 3) * 100%);
+    max-width: calc((3 / 12) * 100%);
   }
 }
 .col-sm-2 {
@@ -502,7 +505,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-2 {
-    max-width: calc((12 / 2) * 100%);
+    max-width: calc((2 / 12) * 100%);
   }
 }
 .col-md-2 {
@@ -510,7 +513,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-2 {
-    max-width: calc((12 / 2) * 100%);
+    max-width: calc((2 / 12) * 100%);
   }
 }
 .col-lg-2 {
@@ -518,7 +521,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-2 {
-    max-width: calc((12 / 2) * 100%);
+    max-width: calc((2 / 12) * 100%);
   }
 }
 .col-xl-2 {
@@ -526,7 +529,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-2 {
-    max-width: calc((12 / 2) * 100%);
+    max-width: calc((2 / 12) * 100%);
   }
 }
 .col-sm-1 {
@@ -534,7 +537,7 @@ button:focus {
 }
 @media (min-width: 576px) {
   .col-sm-1 {
-    max-width: calc((12 / 1) * 100%);
+    max-width: calc((1 / 12) * 100%);
   }
 }
 .col-md-1 {
@@ -542,7 +545,7 @@ button:focus {
 }
 @media (min-width: 768px) {
   .col-md-1 {
-    max-width: calc((12 / 1) * 100%);
+    max-width: calc((1 / 12) * 100%);
   }
 }
 .col-lg-1 {
@@ -550,7 +553,7 @@ button:focus {
 }
 @media (min-width: 992px) {
   .col-lg-1 {
-    max-width: calc((12 / 1) * 100%);
+    max-width: calc((1 / 12) * 100%);
   }
 }
 .col-xl-1 {
@@ -558,7 +561,7 @@ button:focus {
 }
 @media (min-width: 1200px) {
   .col-xl-1 {
-    max-width: calc((12 / 1) * 100%);
+    max-width: calc((1 / 12) * 100%);
   }
 }
 /* Margin Classes */

@@ -21,15 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5528a111-c694-4a14-be50-9c9671d17979" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/ICO/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/PNG/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/SVG/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/assets.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/core.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/core.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/core.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/core.less" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/core.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/keys.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/keys.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/keys.less" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/keys.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/keys.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/core.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/core.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/sample/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/sample/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sample/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/sample/style.min.css" afterDir="false" />
@@ -87,7 +82,7 @@
       <workItem from="1614239369398" duration="4195000" />
       <workItem from="1614389060973" duration="85000" />
       <workItem from="1614414250269" duration="3126000" />
-      <workItem from="1614592797992" duration="1630000" />
+      <workItem from="1614592797992" duration="2999000" />
     </task>
     <servers />
   </component>
