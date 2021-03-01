@@ -1,1 +1,1 @@
-body,html{background-color:#4c515b}#home__banner{background-image:linear-gradient(#3c3842,transparent);min-height:25rem;width:100vw}
+:root{--container-border-radius:0.5rem}body,html{height:100%;background-color:#3c3842}#home__banner{min-height:25rem;width:100%}.navigation{height:auto;width:50%}
