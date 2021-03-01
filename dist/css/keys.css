@@ -34,6 +34,11 @@
 .mech-key-linear,
 button-linear {
   /* Mech Keys Variables */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: inline-block;
   cursor: pointer;
   transition: transform 0.1s;
@@ -125,6 +130,11 @@ button-linear {
 /* HTML Elements Defaults */
 button {
   /* Mech Keys Variables */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: inline-block;
   cursor: pointer;
   transition: transform 0.1s;
@@ -212,5 +222,12 @@ button-linear.round {
 button.round:after,
 button-linear.round:after {
   border-radius: 50vh;
+}
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 /*# sourceMappingURL=keys.css.map */

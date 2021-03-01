@@ -31,6 +31,7 @@
 
 .mech-key{
   /* Mech Keys Variables */
+  .no-select();
   display: inline-block;
   cursor: pointer;
   transition: transform 0.1s;
@@ -121,4 +122,12 @@
 /* HTML Elements Defaults */
 button{
   .mech-key();
+}
+
+.no-select{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
