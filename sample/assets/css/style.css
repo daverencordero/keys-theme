@@ -1,8 +1,74 @@
 /* Color Themes (CT) */
+@font-face {
+  font-family: 'Libre Franklin', sans-serif;
+  src: url("../fonts/libre-franklin.ttf");
+}
 body,
 html {
-  font-family: sans-serif;
+  font-family: "Libre Franklin", sans-serif;
   height: 100%;
   background-color: #3498DB;
+  scroll-snap-type: y mandatory;
+}
+#home__banner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  scroll-snap-align: start;
+}
+#home__banner .title-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20rem;
+  height: auto;
+}
+#home__banner .title-content .title {
+  margin-bottom: 2rem;
+}
+#home__banner .year {
+  color: #ECF0F1;
+  letter-spacing: 0.5rem;
+  margin-top: 2rem;
+}
+#home__banner .arrow-down {
+  margin-bottom: 2rem;
+  height: 1rem;
+}
+#home__banner:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 2rem;
+  height: 90%;
+  width: 0.1rem;
+  transform: translateY(-50%) scaleY(0);
+  background-color: #ECF0F1;
+  transition: transform 0.4s;
+}
+#home__banner:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  right: 2rem;
+  height: 90%;
+  width: 0.1rem;
+  transform: translateY(-50%) scaleY(0);
+  background-color: #ECF0F1;
+  transition: transform 0.4s;
+}
+#home__banner:hover:before,
+#home__banner:hover:after {
+  transform: translateY(-50%) scaleY(1);
+  transition: transform 0.4s;
+}
+#test-section {
+  scroll-snap-align: start;
+  height: 100%;
+  background-color: #ECF0F1;
 }
 /*# sourceMappingURL=style.css.map */
