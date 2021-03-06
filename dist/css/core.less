@@ -175,40 +175,49 @@ button{
   background-color: transparent;
 }
 
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* Column Classes */
 .column-setup(@i) when (@i > 0){
   .col-sm{
+    display: block;
+    width: auto;
     &-@{i}{
-      display: inline-block;
-      width: auto;
       @media (min-width: @sm-breakpoint){
+        width: 100%;
         max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }
   .col-md{
+    display: block;
+    width: auto;
     &-@{i}{
-      display: inline-block;
-      width: auto;
       @media (min-width: @md-breakpoint){
+        width: 100%;
         max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }
   .col-lg{
+    display: block;
+    width: auto;
     &-@{i}{
-      display: inline-block;
-      width: auto;
       @media (min-width: @lg-breakpoint){
+        width: 100%;
         max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
   }
   .col-xl{
+    display: block;
+    width: auto;
     &-@{i}{
-      display: inline-block;
-      width: auto;
       @media (min-width: @xl-breakpoint){
+        width: 100%;
         max-width: calc((@i / @column-classes-num) * 100%);
       }
     }
