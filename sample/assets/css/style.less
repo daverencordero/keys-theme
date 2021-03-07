@@ -12,39 +12,65 @@ body, html{
   height: 100%;
   background-color: @theme-base;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 #home__banner{
-  position: relative;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   scroll-snap-align: start;
+  position: relative;
+  overflow: hidden;
 
-  .title-content{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .home-container{
+    height: 100%;
+    display: flex;
     flex-direction: column;
-    width: 20rem;
-    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 4rem;
 
-    .title{
-      margin-bottom: 2rem;
+    .title-content{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 20rem;
+      height: auto;
+
+      #title{
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+        z-index: 2;
+      }
+
+      #title-art{
+        width: 100%;
+        height: auto;
+        z-index: 2;
+      }
     }
-  }
+    #arrow-down{
+      cursor: pointer;
+      margin-bottom: 2rem;
+      height: 1rem;
+      z-index: 3;
 
-  .year{
-    color: @theme-light;
-    letter-spacing: 0.5rem;
-    margin-top: 2rem;
-  }
+      svg{
+        height: 100%;
+        width: auto;
+      }
+    }
 
-  .arrow-down{
-    margin-bottom: 2rem;
-    height: 1rem;
+    .year{
+      font-size: 1rem;
+      color: @theme-light;
+      letter-spacing: 0.5rem;
+      margin-top: 2rem;
+      z-index: 2;
+    }
   }
 
   &:before{
@@ -57,6 +83,7 @@ body, html{
     transform: translateY(-50%) scaleY(0);
     background-color: @theme-light;
     transition: transform 0.4s;
+    z-index: 2;
   }
 
   &:after {
@@ -69,6 +96,7 @@ body, html{
     transform: translateY(-50%) scaleY(0);
     background-color: @theme-light;
     transition: transform 0.4s;
+    z-index: 2;
   }
 
   &:hover{
@@ -76,6 +104,33 @@ body, html{
       transform: translateY(-50%) scaleY(1);
       transition: transform 0.4s;
     }
+  }
+
+  #bg-path-01, #bg-path-02, #bg-path-03{
+    position: absolute;
+    z-index: 1;
+  }
+
+  #bg-path-01{
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 45%;
+  }
+
+  #bg-path-02{
+    bottom: 0;
+    right: -8%;
+    height: 25%;
+    width: auto;
+  }
+
+  #bg-path-03{
+    top: 50%;
+    right: -10%;
+    transform: translateY(-50%);
+    height: 50%;
+    width: auto;
   }
 }
 

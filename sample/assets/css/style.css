@@ -9,35 +9,59 @@ html {
   height: 100%;
   background-color: #3498DB;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 #home__banner {
+  height: 100%;
+  scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
+}
+#home__banner .home-container {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  scroll-snap-align: start;
+  position: relative;
+  padding: 0 4rem;
 }
-#home__banner .title-content {
+#home__banner .home-container .title-content {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 20rem;
+  width: 100%;
+  max-width: 20rem;
   height: auto;
 }
-#home__banner .title-content .title {
+#home__banner .home-container .title-content #title {
+  width: 100%;
+  height: auto;
   margin-bottom: 2rem;
+  z-index: 2;
 }
-#home__banner .year {
+#home__banner .home-container .title-content #title-art {
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+#home__banner .home-container #arrow-down {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  height: 1rem;
+  z-index: 3;
+}
+#home__banner .home-container #arrow-down svg {
+  height: 100%;
+  width: auto;
+}
+#home__banner .home-container .year {
+  font-size: 1rem;
   color: #ECF0F1;
   letter-spacing: 0.5rem;
   margin-top: 2rem;
-}
-#home__banner .arrow-down {
-  margin-bottom: 2rem;
-  height: 1rem;
+  z-index: 2;
 }
 #home__banner:before {
   position: absolute;
@@ -49,6 +73,7 @@ html {
   transform: translateY(-50%) scaleY(0);
   background-color: #ECF0F1;
   transition: transform 0.4s;
+  z-index: 2;
 }
 #home__banner:after {
   position: absolute;
@@ -60,11 +85,37 @@ html {
   transform: translateY(-50%) scaleY(0);
   background-color: #ECF0F1;
   transition: transform 0.4s;
+  z-index: 2;
 }
 #home__banner:hover:before,
 #home__banner:hover:after {
   transform: translateY(-50%) scaleY(1);
   transition: transform 0.4s;
+}
+#home__banner #bg-path-01,
+#home__banner #bg-path-02,
+#home__banner #bg-path-03 {
+  position: absolute;
+  z-index: 1;
+}
+#home__banner #bg-path-01 {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 45%;
+}
+#home__banner #bg-path-02 {
+  bottom: 0;
+  right: -8%;
+  height: 25%;
+  width: auto;
+}
+#home__banner #bg-path-03 {
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  height: 50%;
+  width: auto;
 }
 #test-section {
   scroll-snap-align: start;
